@@ -17,11 +17,12 @@ public class AdjcentDigitProduct {
 			+ "2005240636899125607176060588611646710940507754100225698315520005593572972571"
 			+ "636269561882670428252483600823257530420752963450";
 	private static String s2 ="43567";
-	public int function() {
+	public long function() {
 		char[] arr = s.toCharArray();
-		int maxProduct=0,i=0;
+		long maxProduct=0;
+		int i=0;
 		while(i<arr.length-13) {
-			int tempProduct= getWindowProduct(i, arr);
+			long tempProduct= getWindowProduct(i, arr);
 			if(tempProduct>maxProduct) {
 				maxProduct=tempProduct;
 			}
@@ -31,11 +32,11 @@ public class AdjcentDigitProduct {
 		return maxProduct;
 	}
 	
-	private int getWindowProduct(int i, char[] arr) {
+	private long getWindowProduct(int i, char[] arr) {
 		//window size is 13
-		int product = 1;
+		long product = 1;
 		for(int j=i;j<=i+12;j++) {
-			int var = Integer.parseInt(Character.toString(arr[j]));
+			long var = Integer.parseInt(Character.toString(arr[j]));
 			product = product*var;
 		}
 		return product;
