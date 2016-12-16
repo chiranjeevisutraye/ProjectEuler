@@ -1,6 +1,7 @@
 package org.euler.basic;
 
 public class Fibonnaci {
+	//Basic Change comment added
 	int n1=0,n2=1,n3=0;
 	static int result=0;
 	public void fib(int count) {
