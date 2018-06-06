@@ -13,9 +13,9 @@ public class SumSquare {
 	}
 
 	public static void main(String[] args) {
+
 		SumSquare ss = new SumSquare();
 		ss.fn();
-		//comment added
 	}
 
 }
